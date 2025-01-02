@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+:root {
+    --background-color: #212121;
+    --neutral-color: #433861;
+    --primary-color: #1485f6;
+    --secondary-color: #85d614;
+    --font-color: #dcdcdc;
+    --marker-color: #ff0031;
+}
+
+header {
+    padding: 1rem 1rem;
+    text-align: center;
+    text-shadow:
+        .1rem .1rem .2rem var(--primary-color) ,
+        .1rem .1rem 2rem  var(--secondary-color) ,
+        0 0 .1rem  var(--secondary-color),
+        0 0 .1rem  var(--primary-color)  ;
+}
+
+input {
+    background-image: linear-gradient(60deg, var(--primary-color), var(--secondary-color));
+    filter: brightness(1.3);
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 1rem 1rem;
+    border: 1px var(--secondary-color);
+    font-size: 1.25rem;
+    color: var(--background-color);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-size: 1.25rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.player1 {
+    margin-right: 20rem;
+    margin-left: 1rem;
+}
+
+.player2 {
+    margin-left: 1rem;
+}
+
+.players, .playerMoment {
+    display: block;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+.buttonPlay {
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--neutral-color);
+    border-radius: 1rem;
+    border: var(--font-color) solid;
+    cursor: pointer;
+    place-self: center;
+    font-size: 100px;
+}
+
+.buttonPlay:hover, .startGame:hover {
+    filter: brightness(0.9);
+}
+
+.buttonPlayGrid{
+    margin: auto;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: .1fr .1fr .1fr;
+    gap: 3rem;
+    width: 50%;
+}
+
+.buttonPlayGridInitial {
+    display: none;
+}
+
+.startGame {
+    cursor: pointer;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 999rem;
+    background-color: var(--neutral-color);
+    margin: 1rem;
+    font-size: 2rem;
+    color: var(--font-color);
+    text-shadow:
+    .1rem .1rem .2rem var(--primary-color) ,
+    .1rem .1rem .2rem var(--primary-color) ,
+    .1rem .1rem 2rem  var(--secondary-color) ,
+    0 0 .1rem  var(--secondary-color),
+    0 0 .1rem  var(--primary-color)  ;
+}
+
+.player1Game {
+    background-color: var(--primary-color);
+    color: var(--marker-color);
+}
+
+.player2Game {
+    background-color: var(--secondary-color);
+    color: var(--marker-color);
+}
+
+.playerMoment {
+    text-align: center;
+    text-shadow:
+    .1rem .1rem .2rem var(--primary-color) ,
+    .1rem .1rem .2rem var(--primary-color) ,
+    .1rem .1rem 2rem  var(--secondary-color) ,
+    0 0 .1rem  var(--secondary-color),
+    0 0 .1rem  var(--primary-color)  ;    
+}

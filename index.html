@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main data-theme="gameTheme">
+        <header class="header">
+            <h1>Jogo da Velha</h1>
+            <hr>
+            <label class="players">Para iniciar, insira o nome de ambos os jogadores e aperte no botão iniciar.</label>
+            <div class="players" id="players">
+                <label for="player1">Jogador 1 (O)</label>
+                <input type="text" class="player1" id="player1" value="" placeholder="Jogador 1">
+
+                <label for="player2">Jogador 2 (X)</label>
+                <input type="text" class="player2" id="player2" value="" placeholder="Jogador 2">
+            </div>
+            <button class="startGame" id="startGame">Iniciar</button>
+        </header>
+
+        <div class="playerMoment">
+            <label id="playerMoment"></label> 
+        </div>
+
+        <div class="buttonPlayGridInitial" id="buttonGrid">
+            <button class="buttonPlay" id="button0" data-value="0"></button>
+            <button class="buttonPlay" id="button1" data-value="1"></button>
+            <button class="buttonPlay" id="button2" data-value="2"></button>
+            <button class="buttonPlay" id="button3" data-value="3"></button>
+            <button class="buttonPlay" id="button4" data-value="4"></button>
+            <button class="buttonPlay" id="button5" data-value="5"></button>
+            <button class="buttonPlay" id="button6" data-value="6"></button>
+            <button class="buttonPlay" id="button7" data-value="7"></button>
+            <button class="buttonPlay" id="button8" data-value="8"></button>
+        </div>
+
+        <section class="winner"></section>
+
+    </main>
+</body>
+</html>
