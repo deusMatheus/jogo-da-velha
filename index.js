@@ -45,12 +45,15 @@ document.querySelectorAll('.buttonPlay').forEach(function(pressedButton){
     if(winnerTest() == '1'){
         console.log('Jogador 1 venceu');
         disableAll('1');
+        enableReplay()
     } else if(winnerTest() == '2'){
         console.log('Jogador 2 venceu');
         disableAll('2');
+        enableReplay()
     } else if(winnerTest() == 'draw'){
         console.log('Empate.');
         disableAll('0');
+        enableReplay()
     }
     });
 });
@@ -103,6 +106,11 @@ function disableAll (winner) {
         texto = 'Vish, deu velha! :S';
     }
     document.getElementById('playerMoment').innerText = texto;
+}
+
+// Criar a parte do botão  com JS
+function enableReplay() {
+
 }
 
 function player1(jogada){
