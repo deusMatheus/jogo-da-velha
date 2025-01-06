@@ -82,11 +82,13 @@ h1 {
 
 .buttonPlayGrid{
     margin: auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
     display: grid;
     place-items: center;
     place-content: center;
     grid-template-columns: .1fr .1fr .1fr;
-    gap: 3rem;
+    gap: 2.7rem;
     width: 50%;
 }
 
@@ -152,4 +154,8 @@ h1 {
     .1rem .1rem 2rem  var(--secondary-color) ,
     0 0 .1rem  var(--secondary-color),
     0 0 .1rem  var(--primary-color)  ;    
+}
+
+.playerNameInput {
+    width: 8rem;
 }
