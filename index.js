@@ -24,7 +24,7 @@ document.getElementById('startGame').addEventListener('click', function(){
         document.getElementById('startGame').style.display = 'none';
         document.getElementById('player1').disabled = true;
         document.getElementById('player2').disabled = true;
-        startGame(playerName1, playerName2);
+        startGame();
     }
 });
 
@@ -106,12 +106,38 @@ function disableAll (winner) {
         texto = 'Vish, deu velha! :S';
     }
     document.getElementById('playerMoment').innerText = texto;
+    enableReplay()
 }
 
 // Criar a parte do botão  com JS
 function enableReplay() {
-
+    document.getElementById('replayButton').style.display = 'inline-block';
+    document.getElementById('replayButton').disabled = false
 }
+
+document.getElementById('replayButton').addEventListener('click', function(){
+    numberOfPlays = 9
+    for(i = 0; i < numberOfPlays; i++){
+        buttonsPlay[i] = ''
+        buttons[i] = ''        
+    }
+    document.querySelectorAll('.buttonPlay').forEach(function(disableButtonAll){
+        disableButtonAll.disabled = false;
+        disableButtonAll.innerHTML = '';
+        disableButtonAll.classList.remove('player1Game')
+        disableButtonAll.classList.remove('player2Game')
+        disableButtonAll.classList.add('buttonPlay');
+
+    })
+    document.getElementById('replayButton').disabled = true;
+    document.getElementById('replayButton').style.display = 'none';
+//    document.getElementById('player1').disabled = true;
+//    document.getElementById('player2').disabled = true;
+    startGame();
+})
+
+//function replayPressed() {
+//}
 
 function player1(jogada){
     buttonsPlay[jogada] = 'x';
@@ -125,7 +151,7 @@ function player2(jogada){
 
 function startGame() {
 
-    document.getElementById('buttonGrid').classList.remove('buttonPlayGridInitial')    
+    document.getElementById('buttonGrid').classList.remove('buttonPlayGridInitial')
     document.getElementById('buttonGrid').classList.add('buttonPlayGrid');
     playerOfTheTime(playerName1, playerName2);
     document.getElementById('playerMoment').innerText = 'O jogador da vez é ' + playerName2;

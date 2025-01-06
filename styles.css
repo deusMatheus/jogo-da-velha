@@ -11,7 +11,9 @@
     --primary-color: #1485f6;
     --secondary-color: #85d614;
     --font-color: #dcdcdc;
-    --marker-color: #ff0031;
+    --marker-color: #f3872e;
+    --player1-color: #172755;
+    --player2-color: #175527;
 }
 
 header {
@@ -112,12 +114,12 @@ h1 {
 .replayButton {
 
     cursor: pointer;
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 999rem;
     background-color: var(--neutral-color);
     margin: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--font-color);
     text-shadow:
     .1rem .1rem .2rem var(--secondary-color) ,
@@ -133,12 +135,12 @@ h1 {
 }
 
 .player1Game {
-    background-color: var(--primary-color);
+    background-color: var(--player1-color);
     color: var(--marker-color);
 }
 
 .player2Game {
-    background-color: var(--secondary-color);
+    background-color: var(--player2-color);
     color: var(--marker-color);
 }
 
