@@ -66,8 +66,8 @@ h1 {
 }
 
 .buttonPlay {
-    height: 7rem;
-    width: 7rem;
+    height: 12vh;
+    width: 12vh;
     background-color: var(--neutral-color);
     border-radius: 1rem;
     border: var(--font-color) solid;
