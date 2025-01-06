@@ -73,7 +73,7 @@ h1 {
     border: var(--font-color) solid;
     cursor: pointer;
     place-self: center;
-    font-size: 100px;
+    font-size: 8vh;
 }
 
 .buttonPlay:hover, .startGame:hover {
@@ -88,7 +88,7 @@ h1 {
     place-items: center;
     place-content: center;
     grid-template-columns: .1fr .1fr .1fr;
-    gap: 2.7rem;
+    gap: 2vw;
     width: 50%;
 }
 
